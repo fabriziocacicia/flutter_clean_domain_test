@@ -1,3 +1,3 @@
-## Unreleased
+## 1.0.0
 
-- Initial version
+- The first stable release
