@@ -1,0 +1,15 @@
+name: flutter_clean_domain_test
+description: A package that provides a testing framework for packages that depends on flutter_clean_domain
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  mocktail: ^0.1.4
+
+  flutter_clean_domain:
+    git:
+      url: git@github.com:fabriziocacicia/flutter_clean_domain.git
+      ref: main
