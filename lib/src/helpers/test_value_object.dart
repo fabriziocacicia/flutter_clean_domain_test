@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter_clean_domain/errors/unexpected_value_error.dart';
 import 'package:flutter_clean_domain/value_failure.dart';
 import 'package:flutter_clean_domain/value_object.dart';
 import 'package:mocktail/mocktail.dart';
@@ -25,6 +26,68 @@ class InvalidValueObject<T extends Object> {
     required this.value,
     required this.valueObject,
     required this.valueFailure,
+  });
+}
+
+void testValidValueObject<T extends Object>({
+  required final ValueObject<T> object,
+  required final T value,
+}) {
+  group("valid ValueObject", () {
+    group("value", () {
+      test("should be the Right value of the Either", () {
+        expect(object.value, equals(Right(value)));
+      });
+    });
+
+    group("getOrCrash", () {
+      test("should return the stored value", () {
+        expect(object.getOrCrash(), equals(value));
+      });
+    });
+
+    group("isValid", () {
+      test("should return true", () {
+        expect(object.isValid(), equals(true));
+      });
+    });
+
+    group("failureOrUnit", () {
+      test("should return a Right", () {
+        expect(object.failureOrUnit, isA<Right>());
+      });
+    });
+  });
+}
+
+void testInvalidValueObject<T extends Object>({
+  required final ValueObject<T> object,
+  required final value,
+}) {
+  group("invalid ValueObject", () {
+    group("value", () {
+      test("should be a Left", () {
+        expect(object.value, isA<Left>());
+      });
+    });
+
+    group("getOrCrash", () {
+      test("should throw an UnexpectedValueError", () {
+        expect(() => object.getOrCrash(), throwsA(isA<UnexpectedValueError>()));
+      });
+    });
+
+    group("isValid", () {
+      test("should return false", () {
+        expect(object.isValid(), equals(false));
+      });
+    });
+
+    group("failureOrUnit", () {
+      test("should return a Left", () {
+        expect(object.failureOrUnit, isA<Left>());
+      });
+    });
   });
 }
 
