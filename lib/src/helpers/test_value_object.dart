@@ -91,7 +91,10 @@ void testInvalidValueObject<T extends Object>({
   });
 }
 
-@deprecated
+@Deprecated(
+  'Use testValidValueObject and testInvalidValueObject instead. Will be '
+  'removed in v2.0.0',
+)
 void testValueObject<T extends Object>({
   required ValidValueObject<T> validObject,
   required InvalidValueObject<T> invalidObject,
