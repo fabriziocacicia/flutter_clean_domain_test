@@ -5,10 +5,10 @@ import 'package:flutter_clean_domain/flutter_clean_domain.dart';
 import 'package:flutter_clean_domain_test/flutter_clean_domain_test.dart';
 import 'package:test/test.dart';
 
-class MockValueObject extends ValueObject<int> {
+class IntValueObject extends ValueObject<int> {
   final Either<ValueFailure<int>, int> _value;
 
-  MockValueObject(Either<ValueFailure<int>, int> value) : _value = value;
+  IntValueObject(Either<ValueFailure<int>, int> value) : _value = value;
 
   @override
   Either<ValueFailure<int>, int> get value => _value;
@@ -31,14 +31,19 @@ class HashSetIntValueObject extends ValueObject<HashSet<int>> {
 void main() {
   group("testValidValueObject", () {
     final validValue = 0;
-    final validValueObject = MockValueObject(Right(validValue));
+    final validValueObject = IntValueObject(Right(validValue));
 
-    testValidValueObject<int>(object: validValueObject, value: validValue);
+    testValidValueObject<int>(
+      name: 'IntValueObject',
+      object: validValueObject,
+      value: validValue,
+    );
 
     final validHashSet = HashSet<int>.from(<int>{1, 2, 3});
     final validHashSetValueObject = HashSetIntValueObject(Right(validHashSet));
 
     testValidValueObject(
+      name: 'HashSetIntValueObject',
       object: validHashSetValueObject,
       value: validHashSet,
     );
@@ -47,7 +52,7 @@ void main() {
   group("testInvalidValueObjectButFailures", () {
     final invalidValue = -1;
     final invalidValueObject =
-        MockValueObject(Left(MockValueFailure(invalidValue)));
+        IntValueObject(Left(MockValueFailure(invalidValue)));
 
     testInvalidValueObject(object: invalidValueObject, value: invalidValue);
   });
