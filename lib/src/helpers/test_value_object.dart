@@ -30,13 +30,14 @@ class InvalidValueObject<T extends Object> {
 }
 
 void testValidValueObject<T extends Object>({
+  final String name = "",
   required final ValueObject<T> object,
   required final T value,
 }) {
-  group("valid ValueObject", () {
+  group("valid $name", () {
     group("value", () {
-      test("should be the Right value of the Either", () {
-        expect(object.value, equals(Right(value)));
+      test("should be a Right value", () {
+        expect(object.value, isA<Right>());
       });
     });
 
