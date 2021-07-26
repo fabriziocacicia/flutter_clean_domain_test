@@ -1,3 +1,8 @@
+## UNRELEASED
+
+- Fixed an issue in the `testValidValueObject` that caused the test of the `value` getter always
+fails
+
 ## 1.2.0
 
 - Added two new helper functions to test `ValueObject`s: `testValidValueObject` and 
