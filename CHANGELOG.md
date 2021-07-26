@@ -1,5 +1,6 @@
 ## UNRELEASED
 
+- Added the `name` parameter to the `testValidValueObject`
 - Fixed an issue in the `testValidValueObject` that caused the test of the `value` getter always
 fails
 
