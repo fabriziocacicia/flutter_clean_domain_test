@@ -13,3 +13,9 @@ dependencies:
     git:
       url: git@github.com:fabriziocacicia/flutter_clean_domain.git
       ref: main
+
+  # Linting and Code analysis
+  dart_lint_rules:
+    git:
+      url: git@github.com:fabriziocacicia/dart_lint_rules.git
+      ref: v0.0.2
