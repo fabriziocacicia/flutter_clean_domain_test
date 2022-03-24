@@ -7,21 +7,40 @@ import 'package:test/test.dart';
 
 import '../mocks/validator_mock.dart';
 
+/// A class that represents a valid [ValueObject], intended to be used in a
+/// testing context.
+/// It stores separately the raw [value] and the [valueObject] that holds it,
+/// for testing purposes.
 class ValidValueObject<T extends Object> {
+  /// The raw value contained in the [valueObject].
   final T value;
+
+  /// The actual [ValueObject].
   final ValueObject<T> valueObject;
 
+  /// Creates a [ValidValueObject].
   ValidValueObject({
     required this.value,
     required this.valueObject,
   });
 }
 
+/// A class that represents an invalid [ValueObject], intended to be used in a
+/// testing context.
+/// It stores separately the raw [value] and the [valueObject] that holds it,
+/// for testing purposes.
+/// It also stores the [valueFailure] related to the invalid [value].
 class InvalidValueObject<T extends Object> {
+  /// The raw value contained in the [valueObject].
   final T value;
+
+  /// The actual [ValueObject].
   final ValueObject<T> valueObject;
+
+  /// The failure caused by the [valueObject].
   final ValueFailure<T> valueFailure;
 
+  /// Creates an [InvalidValueObject].
   InvalidValueObject({
     required this.value,
     required this.valueObject,
@@ -29,6 +48,10 @@ class InvalidValueObject<T extends Object> {
   });
 }
 
+/// An helper function to test a valid [ValueObject].
+/// It requires the raw [value] and the actual Value [object].
+/// It is possible to provide a [name] that will be used in the test group
+/// message.
 void testValidValueObject<T extends Object>({
   final String name = "",
   required final ValueObject<T> object,
@@ -61,9 +84,11 @@ void testValidValueObject<T extends Object>({
   });
 }
 
+/// An helper function to test an invalid [ValueObject].
+/// It requires the raw [value] and the actual Value [object].
 void testInvalidValueObject<T extends Object>({
   required final ValueObject<T> object,
-  required final value,
+  required final T value,
 }) {
   group("invalid ValueObject", () {
     group("value", () {
