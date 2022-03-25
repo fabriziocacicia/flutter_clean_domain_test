@@ -12,7 +12,7 @@ dependencies:
   flutter_clean_domain:
     git:
       url: git@github.com:fabriziocacicia/flutter_clean_domain.git
-      ref: main
+      ref: v1.2.0
 
 dev_dependencies:
   # Linting and Code analysis
