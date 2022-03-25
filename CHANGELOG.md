@@ -1,4 +1,4 @@
-## Unreleased
+## 1.4.1
 
 - Fix an issue causing the failure of `pub get` for packages
 that but depend on `flutter_clean_domain` and `flutter_clean_domain_test`
