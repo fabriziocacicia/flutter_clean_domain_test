@@ -1,3 +1,8 @@
+## Unreleased
+
+- Fix an issue causing the failure of `pub get` for packages
+that but depend on `flutter_clean_domain` and `flutter_clean_domain_test`
+
 ## 1.4.0
 
 - Update `mocktail` dependency to `0.3.0`
