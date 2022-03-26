@@ -1,4 +1,4 @@
 library flutter_clean_domain_test;
 
-export 'helpers.dart';
-export 'mocks.dart';
+export 'src/helpers/helpers.dart';
+export 'src/mocks/mocks.dart';
