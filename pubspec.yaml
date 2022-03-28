@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   mocktail: ^0.3.0
+  dartz: ^0.10.1
 
   flutter_clean_domain:
     git:

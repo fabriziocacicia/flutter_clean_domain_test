@@ -1,3 +1,8 @@
+## Unreleased
+
+- Add helper functions to test validators: `testValidatorOnValidValue`, `testValidatorOnValidValues`,
+  `testValidatorOnInvalidValue`, `testValidatorOnInvalidValues`
+
 ## 1.4.1
 
 - Fix an issue causing the failure of `pub get` for packages
