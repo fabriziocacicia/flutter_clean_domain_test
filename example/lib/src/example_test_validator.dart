@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_clean_domain/flutter_clean_domain.dart';
+import 'package:flutter_clean_domain_test/flutter_clean_domain_test.dart';
 
 class IntValueObject extends ValueObject<int> {
   final Either<ValueFailure<int>, int> _value;
