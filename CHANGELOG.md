@@ -1,3 +1,7 @@
+## Unreleased
+
+- Fix an issue that prevent the usage of the validator helper functions
+
 ## 1.5.0
 
 - Add helper functions to test validators: `testValidatorOnValidValue`, `testValidatorOnValidValues`,
