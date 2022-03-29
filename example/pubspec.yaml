@@ -1,0 +1,14 @@
+name: example
+description: An example application that uses the flutter_clean_domain_test package
+version: 0.1.0
+
+
+environment:
+  sdk: '>=2.16.0-134.1.beta <3.0.0'
+
+# dependencies:
+#   path: ^1.8.0
+
+dev_dependencies:
+  flutter_clean_domain_test:
+    path: ..
