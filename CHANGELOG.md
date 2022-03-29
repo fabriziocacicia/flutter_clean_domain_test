@@ -1,6 +1,6 @@
 ## 1.5.1
 
-- Fix an issue that prevent the usage of the validator helper functions
+- Fix an issue that prevents the usage of the validator helper functions
 
 ## 1.5.0
 
