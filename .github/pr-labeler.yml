@@ -5,5 +5,3 @@ customLabels:
     label: 'type: chore'
 # Search the body of the PR for the `text` [default: true]
 searchBody: false
-# Search for whole words only [default: false]
-wholeWords: true
