@@ -1,0 +1,9 @@
+# Array of labels to be applied to the PR [default: []]
+customLabels:
+  # Finds the `text` within the PR title and body and applies the `label`
+  - text: 'chore:'
+    label: 'type: chore'
+# Search the body of the PR for the `text` [default: true]
+searchBody: false
+# Search for whole words only [default: false]
+wholeWords: true
