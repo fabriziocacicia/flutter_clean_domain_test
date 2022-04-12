@@ -1,0 +1,28 @@
+# Array of labels to be applied to the PR 
+customLabels:
+  # Finds the `text` within the PR title and body and applies the `label`
+  - text: 'chore:'
+    label: 'type: chore'
+  - text: 'docs:'
+    label: 'type: docs'
+  - text: 'feat:'
+    label: 'type: feat'
+  - text: 'bug:'
+    label: 'type: bug'
+  - text: 'test:'
+    label: 'type: test'
+  - text: 'refactor:'
+    label: 'type: refactor'
+  - text: 'revert:'
+    label: 'type: revert'
+  - text: 'ci:'
+    label: 'type: ci'
+  - text: 'perf:'
+    label: 'type: perf'
+  - text: 'build:'
+    label: 'type: build'
+  - text: 'style:'
+    label: 'type: style'
+    
+# Search the body of the PR for the `text`
+searchBody: false
