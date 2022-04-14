@@ -1,6 +1,0 @@
-name: template_base
-description: The base template that all the repositories should create from.
-version: 1.0.0
-
-environment:
-  mason: ">=0.1.0-dev <0.1.0"
