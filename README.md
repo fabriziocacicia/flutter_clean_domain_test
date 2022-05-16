@@ -9,11 +9,18 @@ The base template that all the repositories should create from.
 - Template Sync: automatically keeps the repository in sync with its template
 
 ## Usage
-1) Fork this repo or use it as template to create a new repo
-2) Add some secrets to the repo before usage:
-    - Add a secret called `PERSONAL_ACCESS_TOKEN` where the value is a personal access token which has `repo` and `workflow` permissions
-    - Add the repository name of the template in a secret called `TEMPLATE_REPO_NAME` 
-    - Add the username of the owner of the repository of the template in a secret called `REPO_OWNER_USERNAME`
+Fork this repo or use it as template to create a new repo.
+
+### Actions Secrets
+Add the follwing **Actions Secrets**:
+
+| Name | Value |
+|----|----|
+| `PERSONAL_ACCESS_TOKEN` | A Personal Access Token which has `repo` and `workflow` permissions |
+|`TEMPLATE_REPO_NAME` | The repository name of the template |
+|`REPO_OWNER_USERNAME`| The username of the owner of the repository of the template |
+
+To add an **Actions Secret** click **'New repository secret'** into **'Settings'** -> **'Secrets'** -> **'Actions'**
 
 
 [1]: https://www.conventionalcommits.org/
