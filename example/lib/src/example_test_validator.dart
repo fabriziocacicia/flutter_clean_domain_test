@@ -27,9 +27,6 @@ void main() {
   final int invalidIntValue = 5;
   final invalidIntValues = <int>[0, 1, 2, 3];
 
-  final IntValueFailure valueFailure =
-      IntValueFailure(invalidValue: invalidIntValue);
-
   testValidatorOnValidValue<int>(
     "should return a Right when 10 is passed",
     validator: intValidator,
