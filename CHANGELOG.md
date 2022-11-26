@@ -1,3 +1,9 @@
+## 1.5.2
+
+- Updated dependencies:
+  - `flutter_clean_domain`: v1.3.0
+  - `dart_lint_rules`: v0.1.0
+
 ## 1.5.1
 
 - Fix an issue that prevents the usage of the validator helper functions
