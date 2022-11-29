@@ -14,7 +14,7 @@ jobs:
         with:
             token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: actions-template-sync
-        uses: fabriziocacicia/actions-template-sync@v0.7.0
+        uses: fabriziocacicia/actions-template-sync@v0.8.0
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           source_repo_path: ${{ secrets.REPO_OWNER_USERNAME }}/${{ secrets.TEMPLATE_REPO_NAME }}
