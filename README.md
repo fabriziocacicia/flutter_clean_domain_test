@@ -11,7 +11,7 @@ The base template that all the repositories should create from.
 Fork this repo or use it as template to create a new repo.
 
 ### Actions Secrets
-Add the follwing **Actions Secrets**:
+Add the following **Actions Secrets**:
 
 | Name | Value |
 |----|----|
