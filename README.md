@@ -16,8 +16,6 @@ Add the follwing **Actions Secrets**:
 | Name | Value |
 |----|----|
 | `PERSONAL_ACCESS_TOKEN` | A Personal Access Token which has `repo` and `workflow` permissions |
-|`TEMPLATE_REPO_NAME` | The repository name of the template |
-|`REPO_OWNER_USERNAME`| The username of the owner of the repository of the template |
 
 To add an **Actions Secret** click **'New repository secret'** into **'Settings'** -> **'Secrets'** -> **'Actions'**
 
