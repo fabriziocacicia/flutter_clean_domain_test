@@ -4,6 +4,7 @@
 
 # JetBrains
 .idea/*
+*/.idea/*
 
 # File-based project format
 *.iws
@@ -15,7 +16,6 @@ out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
-
 
 ### macOS template
 # General
