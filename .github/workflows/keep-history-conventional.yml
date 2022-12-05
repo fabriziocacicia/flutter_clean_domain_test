@@ -1,0 +1,15 @@
+name: Keep History Conventional
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  keep-history-conventional:
+    name: Keep History Conventional
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+           fetch-depth: 0
+      - uses: fabriziocacicia/keep-history-conventional@v0.1.0
