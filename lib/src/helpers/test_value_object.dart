@@ -60,7 +60,7 @@ void testValidValueObject<T extends Object>({
   group("valid $name", () {
     group("value", () {
       test("should be a Right value", () {
-        expect(object.value, isA<Right>());
+        expect(object.value, isA<Right<ValueFailure<T>, T>>());
       });
     });
 
@@ -78,7 +78,7 @@ void testValidValueObject<T extends Object>({
 
     group("failureOrUnit", () {
       test("should return a Right", () {
-        expect(object.failureOrUnit, isA<Right>());
+        expect(object.failureOrUnit, isA<Right<ValueFailure<T>, Unit>>());
       });
     });
   });
@@ -93,7 +93,7 @@ void testInvalidValueObject<T extends Object>({
   group("invalid ValueObject", () {
     group("value", () {
       test("should be a Left", () {
-        expect(object.value, isA<Left>());
+        expect(object.value, isA<Left<ValueFailure<T>, T>>());
       });
     });
 
@@ -111,7 +111,7 @@ void testInvalidValueObject<T extends Object>({
 
     group("failureOrUnit", () {
       test("should return a Left", () {
-        expect(object.failureOrUnit, isA<Left>());
+        expect(object.failureOrUnit, isA<Left<ValueFailure<T>, Unit>>());
       });
     });
   });

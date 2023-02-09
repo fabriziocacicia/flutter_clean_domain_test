@@ -1,3 +1,8 @@
+## UNRELEASED
+
+- Updated dependencies:
+  - `dart_lint_rules`: v0.2.0
+
 ## 1.5.2
 
 - Updated dependencies:
