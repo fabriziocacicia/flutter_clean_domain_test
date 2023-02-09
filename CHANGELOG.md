@@ -1,4 +1,4 @@
-## UNRELEASED
+## 1.6.0
 
 - Moved `dart_lint_rules` to dev dependencies
 - Updated dependencies:
