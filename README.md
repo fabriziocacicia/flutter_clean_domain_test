@@ -10,7 +10,8 @@ Updated to [v0.8.0](https://github.com/fabriziocacicia/template_base/releases/ta
 - Conventional PR Titles: checks that the title of PRs follows the [Conventional Commits][1] convention
 
 ## Usage
-Fork this repo or use it as template to create a new repo.
+
+## Getting Started
 
 ### Actions Secrets
 Add the following **Actions Secrets**:
@@ -18,8 +19,12 @@ Add the following **Actions Secrets**:
 | Name | Value |
 |----|----|
 | `PERSONAL_ACCESS_TOKEN` | A Personal Access Token which has `repo` and `workflow` permissions |
+| `SSH_PRIVATE_KEY` | Your private SSH key |
 
 To add an **Actions Secret** click **'New repository secret'** into **'Settings'** -> **'Secrets'** -> **'Actions'**
+
+### SSH Key setup
+1) Add an SSH Key to your Github ([see how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account))
 
 
 [1]: https://www.conventionalcommits.org/
