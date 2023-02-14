@@ -10,8 +10,6 @@ Updated to [v0.8.0](https://github.com/fabriziocacicia/template_base/releases/ta
 - Conventional PR Titles: checks that the title of PRs follows the [Conventional Commits][1] convention
 - Dart Format and Analyze: checks that all the dart files follows the dart formatting and analyze the project sources
 
-## Usage
-
 ## Getting Started
 
 ### Actions Secrets
