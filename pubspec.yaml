@@ -1,0 +1,21 @@
+#TODO: set the package name
+name: my_dart_package
+#TODO: set the package description
+description: A starting point for Dart libraries or applications.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+# dependencies:
+
+dev_dependencies:
+  # Linting and Code analysis
+  dart_lint_rules:
+    git:
+      url: git@github.com:fabriziocacicia/dart_lint_rules.git
+      ref: v0.2.0
+
+  # Testing
+  test: ^1.22.0
