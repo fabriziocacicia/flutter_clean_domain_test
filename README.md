@@ -1,7 +1,7 @@
-# Base Dart Template 
+# Base Dart Project Template 
 The base template that all the dart projects should create from.
 
-Updated to [v0.8.0](https://github.com/fabriziocacicia/template_base/releases/tag/v0.8.0) of [template_base](https://github.com/fabriziocacicia/template_base).
+Updated to [v0.4.0](https://github.com/fabriziocacicia/template_base_dart/releases/tag/v0.4.0) of [template_base_dart](https://github.com/fabriziocacicia/template_base_dart).
 
 ## Features
 - PR Auto Labeler: automatically labels all PRs based on their type specified in the title (chore:, docs:, feat:, etc...)
