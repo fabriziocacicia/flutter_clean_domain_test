@@ -9,6 +9,7 @@ Updated to [v0.4.0](https://github.com/fabriziocacicia/template_base_dart/releas
 - Keep History Conventional: keeps in the commits history of the `main` branch only the commits that follows the [Conventional Commits][1] convention
 - Conventional PR Titles: checks that the title of PRs follows the [Conventional Commits][1] convention
 - Dart Format and Analyze: checks that all the dart files follows the dart formatting and analyze the project sources
+- Dart Test and Coverage: run all the test in the test suite and check the coverage of the codebase
 
 ## Getting Started
 
