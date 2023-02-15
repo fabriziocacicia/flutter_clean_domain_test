@@ -15,10 +15,10 @@ Updated to [v0.8.0](https://github.com/fabriziocacicia/template_base/releases/ta
 ### Actions Secrets
 Add the following **Actions Secrets**:
 
-| Name | Value |
-|----|----|
+| Name                    | Value                                                               |
+|-------------------------|---------------------------------------------------------------------|
 | `PERSONAL_ACCESS_TOKEN` | A Personal Access Token which has `repo` and `workflow` permissions |
-| `SSH_PRIVATE_KEY` | Your private SSH key |
+| `SSH_PRIVATE_KEY`       | Your private SSH key                                                |
 
 To add an **Actions Secret** click **'New repository secret'** into **'Settings'** -> **'Secrets'** -> **'Actions'**
 
