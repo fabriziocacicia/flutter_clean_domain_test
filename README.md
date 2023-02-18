@@ -7,17 +7,40 @@ The base template that all the repositories should create from.
 - Keep History Conventional: keeps in the commits history of the `main` branch only the commits that follows the [Conventional Commits][1] convention
 - Conventional PR Titles: checks that the title of PRs follows the [Conventional Commits][1] convention
 
-## Usage
-Fork this repo or use it as template to create a new repo.
+## Getting Started
+In order to properly use this repository as template you have to use the Github's "Import repository" functionality. You can find it under the "+" menu icon near your profile photo.
 
-### Actions Secrets
+### Repository Settings
+After the importing is complete, go to the **Settings** page of the newly created repository and adjust the following settings.
+
+#### Actions Perimssions
+Under **Code and automation**, open the **General** section under **Actions**:
+
+<img width="327" alt="Screenshot 2023-02-17 at 15 29 14" src="https://user-images.githubusercontent.com/7525888/219682286-780b19c9-553a-4992-bde1-ae77d4bccb4a.png">
+
+In the **Action Permissions** section, select **Allow all actions and reusable workflows**
+
+<img width="619" alt="Screenshot 2023-02-18 at 21 38 46" src="https://user-images.githubusercontent.com/7525888/219897497-44299443-8af6-4e7c-b35f-a4601dbdba60.png">
+
+In the **Workflow permissions** section select to give **Read and write permissions** to the GITHUB_TOKEN and enable **Allow Github Actions to create and approve pull requests**, as follows:
+
+<img width="774" alt="Screenshot 2023-02-17 at 15 33 16" src="https://user-images.githubusercontent.com/7525888/219683244-5df2a416-cc93-412e-ba0e-278b8bebd3c1.png">
+
+And then hit **Save**
+
+
+#### Actions Secrets
 Add the following **Actions Secrets**:
 
 | Name | Value |
 |----|----|
 | `PERSONAL_ACCESS_TOKEN` | A Personal Access Token which has `repo` and `workflow` permissions |
 
-To add an **Actions Secret** click **'New repository secret'** into **'Settings'** -> **'Secrets'** -> **'Actions'**
+To add an **Actions Secret** find the **Security** section in the left sidebar, and open the **Actions** page under **Secrets and Variables**. 
+
+<img width="316" alt="Screenshot 2023-02-18 at 21 43 01" src="https://user-images.githubusercontent.com/7525888/219898623-416e2bf5-dd87-49a6-9240-58a8af289d23.png">
+
+Here click on **New repository Secret**.
 
 
 [1]: https://www.conventionalcommits.org/
