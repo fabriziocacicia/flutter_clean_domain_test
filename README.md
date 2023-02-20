@@ -42,5 +42,17 @@ To add an **Actions Secret** find the **Security** section in the left sidebar, 
 
 Here click on **New repository Secret**.
 
+### Enable Actions
+After allowing Actions to run in the repository as shown in the previous section a new item will appear on the top menu, called **Actions**:
+
+<img width="281" alt="Screenshot 2023-02-20 at 13 35 27" src="https://user-images.githubusercontent.com/7525888/220110143-c03eb69a-847e-4804-9c3f-ad317415b6fc.png">
+
+
+Go into that page and enable the Actions in the repository:
+
+<img width="525" alt="Screenshot 2023-02-20 at 13 35 54" src="https://user-images.githubusercontent.com/7525888/220110056-1f890239-5fc6-4134-a381-58f946d66003.png">
+
+
+
 
 [1]: https://www.conventionalcommits.org/
