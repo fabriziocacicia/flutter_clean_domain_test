@@ -1,0 +1,21 @@
+name: Delete Tags without Release
+on:
+  branch_protection_rule:
+    types: [created]
+
+jobs:
+  delete_tags_without_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Delete Tags without Release
+        uses: fabriziocacicia/delete-tags-without-release-action@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: Self Delete Workflow
+        if: "!contains(github.repository, 'template_base')"
+        uses: fabriziocacicia/self-delete-workflow-action@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
