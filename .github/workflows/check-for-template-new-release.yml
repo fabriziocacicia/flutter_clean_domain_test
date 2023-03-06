@@ -1,6 +1,8 @@
 name: Check for Template new Release
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * SUN' # Runs every Sunday at 12:00
 
 jobs:
   check-for-template-new-release:
