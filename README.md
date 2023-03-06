@@ -7,6 +7,7 @@ The base template that all the repositories should create from.
 - Keep History Conventional: keeps in the commits history of the `main` branch only the commits that follows the [Conventional Commits][1] convention
 - Conventional PR Titles: checks that the title of PRs follows the [Conventional Commits][1] convention
 - Delete Tags without Release: deletes all the tags without an associated release during the initial setup of the repository
+- Check for Template new Release: periodically checks if the template from which the repository is derived has a new release and create a PR with the changes
 
 ## Getting Started
 In order to properly use this repository as template you have to use the Github's "Import repository" functionality. You can find it under the "+" menu icon near your profile photo.
@@ -42,6 +43,19 @@ To add an **Actions Secret** find the **Security** section in the left sidebar, 
 <img width="316" alt="Screenshot 2023-02-18 at 21 43 01" src="https://user-images.githubusercontent.com/7525888/219898623-416e2bf5-dd87-49a6-9240-58a8af289d23.png">
 
 Here click on **New repository Secret**.
+
+
+#### Actions Variables
+Add the following ***Actions Variables***:
+| Name | Value |
+|----|----|
+| `TEMPLATE_REPO` | The template repository from which this repository is derived. In the format: owner/repo_name |
+| `UPDATED_TO_TEMPLATE_RELEASE` | The release name of the template repository from which this repository is derived (i.e. v0.1.0) |
+
+To add an **Actions Variable** find the **Security** section in the left sidebar, and open the **Actions** page under **Secrets and Variables**. 
+
+
+Here, switch to the **Variables** tab and then click on the green **New repository variable** button on top.
 
 ### Enable Actions
 After allowing Actions to run in the repository as shown in the previous section a new item will appear on the top menu, called **Actions**:
