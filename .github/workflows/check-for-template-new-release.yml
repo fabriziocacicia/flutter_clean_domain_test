@@ -62,6 +62,8 @@ jobs:
             
             ## Steps to follow to merge the changes:
             - [ ] Clone the Repository locally: `git clone https://github.com/${{ github.repository }}`
+              or 
+              If you already have the repository locally, fetch the latest version of it: `git fetch`
             - [ ] Checkout the `${{ env.BRANCH_NAME }}` branch: `git checkout ${{ env.BRANCH_NAME }}`
             - [ ] Add the template as remote repository: `git remote add template https://github.com/${{ vars.TEMPLATE_REPO }}.git`
             - [ ] Fetch the template repository: `git fetch template`
