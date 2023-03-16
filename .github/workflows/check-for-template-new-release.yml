@@ -67,7 +67,7 @@ jobs:
             - [ ] Checkout the `${{ env.BRANCH_NAME }}` branch: `git checkout ${{ env.BRANCH_NAME }}`
             - [ ] Add the template as remote repository: `git remote add template https://github.com/${{ vars.TEMPLATE_REPO }}.git`
             - [ ] Fetch the template repository: `git fetch template`
-            - [ ] Merge the tag of the latest template release: `git merge ${{ needs.check-for-template-new-release.outputs.TEMPLATE_LATEST_RELEASE }}`
+            - [ ] Rebase the branch on the tag of the latest template release: `git rebase ${{ needs.check-for-template-new-release.outputs.TEMPLATE_LATEST_RELEASE }}`
             - [ ] Solve any conflicts
             - [ ] Push the changes to the remote branch: `git push origin ${{ env.BRANCH_NAME }}`
             - [ ] Create a PR with the changes from `${{ env.BRANCH_NAME }}` branch giving it as title the same name as this issue.
