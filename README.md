@@ -7,7 +7,7 @@ The base template that all the repositories should create from.
 - Keep History Conventional: keeps in the commits history of the `main` branch only the commits that follows the [Conventional Commits][1] convention
 - Conventional PR Titles: checks that the title of PRs follows the [Conventional Commits][1] convention
 - Delete Tags without Release: deletes all the tags without an associated release during the initial setup of the repository
-- Check for Template new Release: periodically checks if the template from which the repository is derived has a new release and create an issue with the istructions on how to merge the changes
+- Check for Template new Release: periodically checks if the template from which the repository is derived has a new release and create an PR to handle the changes
 
 
 ## Getting Started
