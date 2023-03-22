@@ -1,0 +1,28 @@
+name: Update template release variable after merge
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  update_template_release_variable_after_merge:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.head.ref, 'chore/merge_$${{vars.TEMPLATE_REPO}}_') && contains(github.event.pull_request.title, 'chore') && contains(github.event.pull_request.title, 'merge $${{vars.TEMPLATE_REPO}}') && contains(github.event.pull_request.title, 'changes')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Extract template latest release name
+      id: template_latest_release
+      shell: bash
+      run: |
+        IFS='_'
+        read -a strarr <<< ${{ github.event.pull_request.head.ref }}
+        TEMPLATE_LATEST_RELEASE=${strarr[-1]}
+        IFS=' '
+        echo "value=$TEMPLATE_LATEST_RELEASE" >> $GITHUB_OUTPUT
+    - uses: octokit/request-action@v2.1.7
+      env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      with:
+        route: PATCH /repos/${{ github.repository }}/actions/variables/UPDATED_TO_TEMPLATE_RELEASE
+        name: UPDATED_TO_TEMPLATE_RELEASE
+        value: ${{ steps.template_latest_release.outputs.value }}
